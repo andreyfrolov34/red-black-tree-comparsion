@@ -1,0 +1,42 @@
+{
+  "name": "red-black-tree-comparsion",
+  "version": "1.0.0",
+  "description": "Comparison of simple binary tree and red-black tree using node js (typescript)",
+  "main": "dist/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-modules dist/app.js",
+    "dev": "nodemon src/data-structures/tree/example.ts",
+    "build": "tsc -p .",
+    "lint:watch": "eslint 'src/**/*.ts'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint",
+      "git add"
+    ]
+  },
+  "author": "andrey frolov",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "12.12.9",
+    "@typescript-eslint/parser": "2.8.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "2.8.0",
+    "eslint": "6.6.0",
+    "eslint-config-airbnb-base": "13.2.0",
+    "eslint-plugin-import": "2.18.0",
+    "husky": "3.1.0",
+    "lint-staged": "9.4.3",
+    "nodemon": "1.19.4",
+    "ts-node": "8.5.2",
+    "typescript": "3.7.2"
+  }
+}
